@@ -1,0 +1,63 @@
+//
+// Prefix header for all source files of the 'FlickrSearch' target in the 'FlickrSearch' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+	#import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>
+
+//************************************** Console logging ***********************
+
+#define SM_VERBOSE_LOGGING 1
+#if defined(SM_VERBOSE_LOGGING)
+#define SMLOG(fmt, ...) {    \
+NSString* is = [NSString stringWithFormat:fmt, ##__VA_ARGS__]; \
+NSLog(@"%s:%d %@", __FUNCTION__, __LINE__, is); \
+}
+#else
+#define SMLOG(fmt, ...) NSLog(fmt, ##__VA_ARGS__)
+#endif //SM_VERBOSE_LOGGING
+
+
+//************************************** Time Marking **************************
+static bool hasRun = NO;
+static NSDate* __attribute__((unused)) startTime;
+
+#define SM_VERBOSE_MARK_TIME 1
+#if defined(SM_VERBOSE_MARK_TIME)
+#define SM_MARK_TIME { \
+if(hasRun == NO){ \
+startTime = [NSDate date]; \
+hasRun = YES; \
+NSLog(@"%s:%d Time marked: (first)", __FUNCTION__, __LINE__); \
+} \
+else { \
+NSDate* finishTime = [NSDate date]; \
+NSTimeInterval executionTime = [finishTime timeIntervalSinceDate:startTime]; \
+NSLog(@"%s:%d Time marked: %fms", __FUNCTION__, __LINE__, executionTime); \
+startTime = finishTime; \
+} \
+}
+#else
+#define SM_MARK_TIME { \
+if(hasRun == NO){ \
+startTime = [NSDate date]; \
+hasRun = YES; \
+NSLog(@"Time marked: (first)"); \
+} \
+else { \
+NSDate* finishTime = [NSDate date]; \
+NSTimeInterval executionTime = [finishTime timeIntervalSinceDate:startTime]; \
+NSLog(@"Time marked: %fms", executionTime  ); \
+startTime = finishTime; \
+} \
+}
+#endif //SM_VERBOSE_MARK_TIME
+
+#endif
