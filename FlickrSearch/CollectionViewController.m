@@ -7,7 +7,7 @@
 //
 // API Key - 2738538d006c93bf91120fbfa537b8a7
 #import <MessageUI/MessageUI.h>
-#import "ViewController.h"
+#import "CollectionViewController.h"
 #import "Flickr.h"
 #import "FlickrPhoto.h"
 #import "FlickrPhotoCell.h"
@@ -21,7 +21,7 @@
 static const CGFloat kMinScale = 1.0f;
 static const CGFloat kMaxScale = 3.0f;
 
-@interface ViewController () <UITextFieldDelegate,
+@interface CollectionViewController () <UITextFieldDelegate,
     UICollectionViewDataSource,
     UICollectionViewDelegate,
     MFMailComposeViewControllerDelegate,
@@ -53,7 +53,7 @@ static const CGFloat kMaxScale = 3.0f;
 
 @end
 
-@implementation ViewController
+@implementation CollectionViewController
 
 - (void)viewDidLoad {
     SMLOG(@"");
@@ -159,6 +159,17 @@ static const CGFloat kMaxScale = 3.0f;
     [self.collectionView setContentOffset:CGPointZero animated:NO];
 }
 
+
+-(void)ViewControllerDelegateUserIsDone:(ViewControllerCompletion)completion{
+    completion(nil, self);
+}
+-(void)ViewControllerDelegateUserCancelled:(ViewControllerCompletion)completion{
+    completion(nil, self);    
+}
+
+- (IBAction)backButtonHandler:(id)sender {
+    self.completionUserIsDone(nil, self);
+}
 
 #pragma mark UIGestureRecognizers
 // We are going to delete an item with a long press

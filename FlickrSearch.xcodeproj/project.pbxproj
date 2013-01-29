@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C643AB2716B6E4D700D060ED /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C643AB2616B6E4D700D060ED /* MainViewController.m */; };
+		C64B21AF16B70461003EC159 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64B21AE16B70461003EC159 /* PageViewController.m */; };
+		C64B21B316B7048D003EC159 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64B21B216B7048D003EC159 /* DataViewController.m */; };
+		C64B21B616B704A4003EC159 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64B21B516B704A4003EC159 /* ModelController.m */; };
 		C67D3EEE16B3194300AF2B90 /* SimpleFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C67D3EED16B3194300AF2B90 /* SimpleFlowLayout.m */; };
 		C67D3EF116B32C8A00AF2B90 /* PinchLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C67D3EF016B32C8A00AF2B90 /* PinchLayout.m */; };
 		C67D3EF716B3443200AF2B90 /* StackedGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C67D3EF616B3443200AF2B90 /* StackedGridLayout.m */; };
@@ -20,7 +24,7 @@
 		DD8D01A015BE5D9200E62C80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8D019F15BE5D9200E62C80 /* main.m */; };
 		DD8D01A415BE5D9200E62C80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8D01A315BE5D9200E62C80 /* AppDelegate.m */; };
 		DD8D01A715BE5D9200E62C80 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8D01A515BE5D9200E62C80 /* MainStoryboard.storyboard */; };
-		DD8D01AA15BE5D9200E62C80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8D01A915BE5D9200E62C80 /* ViewController.m */; };
+		DD8D01AA15BE5D9200E62C80 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8D01A915BE5D9200E62C80 /* CollectionViewController.m */; };
 		DD8D01C515BE5E4300E62C80 /* bg_cork.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8D01B115BE5E4300E62C80 /* bg_cork.png */; };
 		DD8D01C615BE5E4300E62C80 /* bg_cork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8D01B215BE5E4300E62C80 /* bg_cork@2x.png */; };
 		DD8D01C715BE5E4300E62C80 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8D01B315BE5E4300E62C80 /* button.png */; };
@@ -50,6 +54,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C643AB2516B6E4D700D060ED /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
+		C643AB2616B6E4D700D060ED /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
+		C64B21AD16B70461003EC159 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		C64B21AE16B70461003EC159 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		C64B21B116B7048D003EC159 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		C64B21B216B7048D003EC159 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		C64B21B416B704A4003EC159 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
+		C64B21B516B704A4003EC159 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		C67D3EEC16B3194300AF2B90 /* SimpleFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFlowLayout.h; sourceTree = "<group>"; };
 		C67D3EED16B3194300AF2B90 /* SimpleFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFlowLayout.m; sourceTree = "<group>"; };
 		C67D3EEF16B32C8A00AF2B90 /* PinchLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinchLayout.h; sourceTree = "<group>"; };
@@ -72,8 +84,8 @@
 		DD8D01A215BE5D9200E62C80 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DD8D01A315BE5D9200E62C80 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DD8D01A615BE5D9200E62C80 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		DD8D01A815BE5D9200E62C80 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DD8D01A915BE5D9200E62C80 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DD8D01A815BE5D9200E62C80 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		DD8D01A915BE5D9200E62C80 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		DD8D01B115BE5E4300E62C80 /* bg_cork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_cork.png; sourceTree = "<group>"; };
 		DD8D01B215BE5E4300E62C80 /* bg_cork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_cork@2x.png"; sourceTree = "<group>"; };
 		DD8D01B315BE5E4300E62C80 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
@@ -123,6 +135,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C643AB2916B6E4E000D060ED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C64B21B016B70465003EC159 /* page */,
+				C643AB2516B6E4D700D060ED /* MainViewController.h */,
+				C643AB2616B6E4D700D060ED /* MainViewController.m */,
+				DD8D01A815BE5D9200E62C80 /* CollectionViewController.h */,
+				DD8D01A915BE5D9200E62C80 /* CollectionViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C64B21B016B70465003EC159 /* page */ = {
+			isa = PBXGroup;
+			children = (
+				C64B21AD16B70461003EC159 /* PageViewController.h */,
+				C64B21AE16B70461003EC159 /* PageViewController.m */,
+				C64B21B116B7048D003EC159 /* DataViewController.h */,
+				C64B21B216B7048D003EC159 /* DataViewController.m */,
+				C64B21B416B704A4003EC159 /* ModelController.h */,
+				C64B21B516B704A4003EC159 /* ModelController.m */,
+			);
+			name = page;
+			sourceTree = "<group>";
+		};
 		C91C87C915E2BE2800BEA7BA /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,9 +213,8 @@
 				DD8D01D915BE735700E62C80 /* Flickr Interface */,
 				DD8D019A15BE5D9200E62C80 /* Supporting Files */,
 				C91C87C915E2BE2800BEA7BA /* Layout */,
+				C643AB2916B6E4E000D060ED /* Controllers */,
 				DD8D01A515BE5D9200E62C80 /* MainStoryboard.storyboard */,
-				DD8D01A815BE5D9200E62C80 /* ViewController.h */,
-				DD8D01A915BE5D9200E62C80 /* ViewController.m */,
 				DDC689DF15BE9A0400C36596 /* FlickrPhotoCell.h */,
 				DDC689E015BE9A0400C36596 /* FlickrPhotoCell.m */,
 				DDC68A0315BECC7B00C36596 /* FlickrPhotoHeaderView.h */,
@@ -325,7 +361,7 @@
 			files = (
 				DD8D01A015BE5D9200E62C80 /* main.m in Sources */,
 				DD8D01A415BE5D9200E62C80 /* AppDelegate.m in Sources */,
-				DD8D01AA15BE5D9200E62C80 /* ViewController.m in Sources */,
+				DD8D01AA15BE5D9200E62C80 /* CollectionViewController.m in Sources */,
 				DD8D01DE15BE735700E62C80 /* Flickr.m in Sources */,
 				DD8D01DF15BE735700E62C80 /* FlickrPhoto.m in Sources */,
 				DDC689E115BE9A0400C36596 /* FlickrPhotoCell.m in Sources */,
@@ -336,6 +372,10 @@
 				C67D3EF716B3443200AF2B90 /* StackedGridLayout.m in Sources */,
 				C67D3EFA16B346FD00AF2B90 /* StackedGridLayoutSection.m in Sources */,
 				C67D3EFD16B3536E00AF2B90 /* CoverFlowLayout.m in Sources */,
+				C643AB2716B6E4D700D060ED /* MainViewController.m in Sources */,
+				C64B21AF16B70461003EC159 /* PageViewController.m in Sources */,
+				C64B21B316B7048D003EC159 /* DataViewController.m in Sources */,
+				C64B21B616B704A4003EC159 /* ModelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
