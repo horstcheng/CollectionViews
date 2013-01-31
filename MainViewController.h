@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+typedef void (^MainViewControllerCompletion)(NSError* error, id sender);
 
+@interface MainViewController : UIViewController
+@property (nonatomic, strong) MainViewControllerCompletion completion;
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef void (^PageViewControllerCompletion)(NSError* error, id sender);
+
 
 @interface PageViewController : UIViewController
-
+@property (nonatomic, strong) PageViewControllerCompletion completionUserIsDone;
 @end

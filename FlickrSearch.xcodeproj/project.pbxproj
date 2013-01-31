@@ -16,6 +16,14 @@
 		C67D3EF716B3443200AF2B90 /* StackedGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C67D3EF616B3443200AF2B90 /* StackedGridLayout.m */; };
 		C67D3EFA16B346FD00AF2B90 /* StackedGridLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = C67D3EF916B346FD00AF2B90 /* StackedGridLayoutSection.m */; };
 		C67D3EFD16B3536E00AF2B90 /* CoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C67D3EFC16B3536D00AF2B90 /* CoverFlowLayout.m */; };
+		C6D5409A16B9A14F001C97CD /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D5409916B9A14F001C97CD /* PopoverViewController.m */; };
+		C6D5409D16B9A52D001C97CD /* ColorPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D5409C16B9A52D001C97CD /* ColorPickerTableViewController.m */; };
+		C6D540A016B9A635001C97CD /* PopoverSegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D5409F16B9A635001C97CD /* PopoverSegueViewController.m */; };
+		C6D540A616B9E616001C97CD /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D540A516B9E616001C97CD /* SplitViewController.m */; };
+		C6D540AC16B9E7DC001C97CD /* SplitMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D540AB16B9E7DC001C97CD /* SplitMasterTableViewController.m */; };
+		C6D540AF16B9E7F2001C97CD /* SplitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D540AE16B9E7F2001C97CD /* SplitDetailViewController.m */; };
+		C6D540B316B9F650001C97CD /* large_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D540B116B9F650001C97CD /* large_button.png */; };
+		C6D540B416B9F650001C97CD /* large_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D540B216B9F650001C97CD /* large_button_pressed.png */; };
 		C91C87D715E2BE4800BEA7BA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91C87D615E2BE4800BEA7BA /* QuartzCore.framework */; };
 		DD8D019415BE5D9200E62C80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D019315BE5D9200E62C80 /* UIKit.framework */; };
 		DD8D019615BE5D9200E62C80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D019515BE5D9200E62C80 /* Foundation.framework */; };
@@ -72,6 +80,20 @@
 		C67D3EF916B346FD00AF2B90 /* StackedGridLayoutSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackedGridLayoutSection.m; sourceTree = "<group>"; };
 		C67D3EFB16B3536D00AF2B90 /* CoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowLayout.h; sourceTree = "<group>"; };
 		C67D3EFC16B3536D00AF2B90 /* CoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowLayout.m; sourceTree = "<group>"; };
+		C6D5409816B9A14F001C97CD /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
+		C6D5409916B9A14F001C97CD /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
+		C6D5409B16B9A52D001C97CD /* ColorPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerTableViewController.h; sourceTree = "<group>"; };
+		C6D5409C16B9A52D001C97CD /* ColorPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerTableViewController.m; sourceTree = "<group>"; };
+		C6D5409E16B9A635001C97CD /* PopoverSegueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverSegueViewController.h; sourceTree = "<group>"; };
+		C6D5409F16B9A635001C97CD /* PopoverSegueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverSegueViewController.m; sourceTree = "<group>"; };
+		C6D540A416B9E616001C97CD /* SplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewController.h; sourceTree = "<group>"; };
+		C6D540A516B9E616001C97CD /* SplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewController.m; sourceTree = "<group>"; };
+		C6D540AA16B9E7DC001C97CD /* SplitMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitMasterTableViewController.h; sourceTree = "<group>"; };
+		C6D540AB16B9E7DC001C97CD /* SplitMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitMasterTableViewController.m; sourceTree = "<group>"; };
+		C6D540AD16B9E7F2001C97CD /* SplitDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitDetailViewController.h; sourceTree = "<group>"; };
+		C6D540AE16B9E7F2001C97CD /* SplitDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitDetailViewController.m; sourceTree = "<group>"; };
+		C6D540B116B9F650001C97CD /* large_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = large_button.png; sourceTree = "<group>"; };
+		C6D540B216B9F650001C97CD /* large_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = large_button_pressed.png; sourceTree = "<group>"; };
 		C91C87D615E2BE4800BEA7BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DD8D018F15BE5D9200E62C80 /* FlickrSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8D019315BE5D9200E62C80 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -138,11 +160,12 @@
 		C643AB2916B6E4E000D060ED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C6D540A316B9E4FA001C97CD /* split */,
+				C6D540A116B9DF66001C97CD /* collection */,
+				C6D5409716B9A137001C97CD /* popover */,
 				C64B21B016B70465003EC159 /* page */,
 				C643AB2516B6E4D700D060ED /* MainViewController.h */,
 				C643AB2616B6E4D700D060ED /* MainViewController.m */,
-				DD8D01A815BE5D9200E62C80 /* CollectionViewController.h */,
-				DD8D01A915BE5D9200E62C80 /* CollectionViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +181,65 @@
 				C64B21B516B704A4003EC159 /* ModelController.m */,
 			);
 			name = page;
+			sourceTree = "<group>";
+		};
+		C6D5409716B9A137001C97CD /* popover */ = {
+			isa = PBXGroup;
+			children = (
+				C6D5409816B9A14F001C97CD /* PopoverViewController.h */,
+				C6D5409916B9A14F001C97CD /* PopoverViewController.m */,
+				C6D5409B16B9A52D001C97CD /* ColorPickerTableViewController.h */,
+				C6D5409C16B9A52D001C97CD /* ColorPickerTableViewController.m */,
+				C6D5409E16B9A635001C97CD /* PopoverSegueViewController.h */,
+				C6D5409F16B9A635001C97CD /* PopoverSegueViewController.m */,
+			);
+			name = popover;
+			sourceTree = "<group>";
+		};
+		C6D540A116B9DF66001C97CD /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				DD8D01A815BE5D9200E62C80 /* CollectionViewController.h */,
+				DD8D01A915BE5D9200E62C80 /* CollectionViewController.m */,
+				C6D540A216B9DFB0001C97CD /* flickr */,
+				C91C87C915E2BE2800BEA7BA /* Layout */,
+			);
+			name = collection;
+			sourceTree = "<group>";
+		};
+		C6D540A216B9DFB0001C97CD /* flickr */ = {
+			isa = PBXGroup;
+			children = (
+				DDC689DF15BE9A0400C36596 /* FlickrPhotoCell.h */,
+				DDC689E015BE9A0400C36596 /* FlickrPhotoCell.m */,
+				DDC68A0315BECC7B00C36596 /* FlickrPhotoHeaderView.h */,
+				DDC68A0415BECC7B00C36596 /* FlickrPhotoHeaderView.m */,
+				DD9E2EF115BF9D8800455168 /* FlickrPhotoViewController.h */,
+				DD9E2EF215BF9D8800455168 /* FlickrPhotoViewController.m */,
+			);
+			name = flickr;
+			sourceTree = "<group>";
+		};
+		C6D540A316B9E4FA001C97CD /* split */ = {
+			isa = PBXGroup;
+			children = (
+				C6D540A416B9E616001C97CD /* SplitViewController.h */,
+				C6D540A516B9E616001C97CD /* SplitViewController.m */,
+				C6D540AA16B9E7DC001C97CD /* SplitMasterTableViewController.h */,
+				C6D540AB16B9E7DC001C97CD /* SplitMasterTableViewController.m */,
+				C6D540AD16B9E7F2001C97CD /* SplitDetailViewController.h */,
+				C6D540AE16B9E7F2001C97CD /* SplitDetailViewController.m */,
+			);
+			name = split;
+			sourceTree = "<group>";
+		};
+		C6D540B016B9F650001C97CD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C6D540B116B9F650001C97CD /* large_button.png */,
+				C6D540B216B9F650001C97CD /* large_button_pressed.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		C91C87C915E2BE2800BEA7BA /* Layout */ = {
@@ -209,18 +291,12 @@
 		DD8D019915BE5D9200E62C80 /* FlickrSearch */ = {
 			isa = PBXGroup;
 			children = (
+				C6D540B016B9F650001C97CD /* images */,
 				DD8D01B015BE5E4300E62C80 /* Assets */,
 				DD8D01D915BE735700E62C80 /* Flickr Interface */,
 				DD8D019A15BE5D9200E62C80 /* Supporting Files */,
-				C91C87C915E2BE2800BEA7BA /* Layout */,
 				C643AB2916B6E4E000D060ED /* Controllers */,
 				DD8D01A515BE5D9200E62C80 /* MainStoryboard.storyboard */,
-				DDC689DF15BE9A0400C36596 /* FlickrPhotoCell.h */,
-				DDC689E015BE9A0400C36596 /* FlickrPhotoCell.m */,
-				DDC68A0315BECC7B00C36596 /* FlickrPhotoHeaderView.h */,
-				DDC68A0415BECC7B00C36596 /* FlickrPhotoHeaderView.m */,
-				DD9E2EF115BF9D8800455168 /* FlickrPhotoViewController.h */,
-				DD9E2EF215BF9D8800455168 /* FlickrPhotoViewController.m */,
 			);
 			path = FlickrSearch;
 			sourceTree = "<group>";
@@ -349,6 +425,8 @@
 				DD8D01D615BE5E4300E62C80 /* search_field@2x.png in Resources */,
 				DD8D01D715BE5E4300E62C80 /* search_text.png in Resources */,
 				DD8D01D815BE5E4300E62C80 /* search_text@2x.png in Resources */,
+				C6D540B316B9F650001C97CD /* large_button.png in Resources */,
+				C6D540B416B9F650001C97CD /* large_button_pressed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +454,12 @@
 				C64B21AF16B70461003EC159 /* PageViewController.m in Sources */,
 				C64B21B316B7048D003EC159 /* DataViewController.m in Sources */,
 				C64B21B616B704A4003EC159 /* ModelController.m in Sources */,
+				C6D5409A16B9A14F001C97CD /* PopoverViewController.m in Sources */,
+				C6D5409D16B9A52D001C97CD /* ColorPickerTableViewController.m in Sources */,
+				C6D540A016B9A635001C97CD /* PopoverSegueViewController.m in Sources */,
+				C6D540A616B9E616001C97CD /* SplitViewController.m in Sources */,
+				C6D540AC16B9E7DC001C97CD /* SplitMasterTableViewController.m in Sources */,
+				C6D540AF16B9E7F2001C97CD /* SplitDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

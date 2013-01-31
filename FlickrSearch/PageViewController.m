@@ -33,7 +33,7 @@
     
     self.flickr = [[Flickr alloc] init];
     
-    [self.modelController.searchResults addObject:@"placeholder"];	
+
     [self configPageView];
 }
 
@@ -57,7 +57,7 @@
     // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
     CGRect pageViewRect = self.view.bounds;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        pageViewRect = CGRectInset(pageViewRect, 40.0, 80.0);
+        pageViewRect = CGRectInset(pageViewRect, 40.0, 50.0);
     }
     self.pageViewController.view.frame = pageViewRect;
     
@@ -76,33 +76,36 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)doneButtonHandler:(id)sender {
+    self.completionUserIsDone(nil, self);
+}
 
 
 #pragma mark - UITextFieldDelegate methods
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    SMLOG(@"");
-    [self.flickr searchFlickrForTerm:textField.text completionBlock:^(NSString *searchTerm, NSArray *results, NSError *error) {
-        SMLOG(@"");
-        if (results && [results count] > 0) {
-            NSLog(@"Found %d photos matching %@", [results count],searchTerm);
-            self.modelController.searchResults = [results mutableCopy];
-			dispatch_async(dispatch_get_main_queue(), ^{
-                DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
-                NSArray *viewControllers = @[startingViewController];
-                [self.pageViewController setViewControllers:viewControllers
-                                                  direction:UIPageViewControllerNavigationDirectionForward
-                                                   animated:YES
-                                                 completion:NULL];
-			});
-		} else {
-			NSLog(@"Error searching Flickr: %@", error.localizedDescription);
-		}
-	}];
-	
-    [textField resignFirstResponder];
-    return YES;
-}
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+//    SMLOG(@"");
+//    [self.flickr searchFlickrForTerm:textField.text completionBlock:^(NSString *searchTerm, NSArray *results, NSError *error) {
+//        SMLOG(@"");
+//        if (results && [results count] > 0) {
+//            NSLog(@"Found %d photos matching %@", [results count],searchTerm);
+//            self.modelController.searchResults = [results mutableCopy];
+//			dispatch_async(dispatch_get_main_queue(), ^{
+//                DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+//                NSArray *viewControllers = @[startingViewController];
+//                [self.pageViewController setViewControllers:viewControllers
+//                                                  direction:UIPageViewControllerNavigationDirectionForward
+//                                                   animated:YES
+//                                                 completion:NULL];
+//			});
+//		} else {
+//			NSLog(@"Error searching Flickr: %@", error.localizedDescription);
+//		}
+//	}];
+//	
+//    [textField resignFirstResponder];
+//    return YES;
+//}
 
 
 

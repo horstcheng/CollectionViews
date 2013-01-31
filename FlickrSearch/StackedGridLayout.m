@@ -28,6 +28,7 @@
         NSInteger numberOfColumns = [_myDelegate collectionView:self.collectionView
                                                          layout:self
                                        numberOfColumnsInSection:i];
+        numberOfColumns = 6;
         NSInteger numberOfItems = [self.collectionView numberOfItemsInSection:i];
         UIEdgeInsets itemInsets = [_myDelegate collectionView:self.collectionView layout:self itemInsetsForSectionAtIndex:i];
         StackedGridLayoutSection *section = [[StackedGridLayoutSection alloc] initWithOrigin:currentOrigin

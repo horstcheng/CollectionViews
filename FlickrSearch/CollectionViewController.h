@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-typedef void (^ViewControllerCompletion)(NSError* error, id sender);
+typedef void (^CollectionViewControllerCompletion)(NSError* error, id sender);
 
 
 @interface CollectionViewController : UIViewController
-@property (nonatomic, strong) ViewControllerCompletion completionUserIsDone;
-@property (nonatomic, strong) ViewControllerCompletion completionUserCancelled;
+@property (nonatomic, strong) CollectionViewControllerCompletion completionUserIsDone;
+@property (nonatomic, strong) CollectionViewControllerCompletion completionUserCancelled;
 @end

@@ -26,8 +26,8 @@ NSLog(@"%s:%d %@", __FUNCTION__, __LINE__, is); \
 
 
 //************************************** Time Marking **************************
-static bool hasRun = NO;
-static NSDate* __attribute__((unused)) startTime;
+__attribute__((unused)) static bool hasRun = NO;
+__attribute__((unused)) static NSDate* startTime;
 
 #define SM_VERBOSE_MARK_TIME 1
 #if defined(SM_VERBOSE_MARK_TIME)

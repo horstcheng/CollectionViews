@@ -160,15 +160,18 @@ static const CGFloat kMaxScale = 3.0f;
 }
 
 
--(void)ViewControllerDelegateUserIsDone:(ViewControllerCompletion)completion{
+-(void)ViewControllerDelegateUserIsDone:(CollectionViewControllerCompletion)completion{
     completion(nil, self);
 }
--(void)ViewControllerDelegateUserCancelled:(ViewControllerCompletion)completion{
+-(void)ViewControllerDelegateUserCancelled:(CollectionViewControllerCompletion)completion{
     completion(nil, self);    
 }
 
 - (IBAction)backButtonHandler:(id)sender {
     self.completionUserIsDone(nil, self);
+}
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    [self.collectionView.collectionViewLayout invalidateLayout];
 }
 
 #pragma mark UIGestureRecognizers

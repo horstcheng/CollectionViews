@@ -10,7 +10,7 @@
 #import "DataViewController.h"
 
 @interface ModelController ()
-	
+	@property (readonly, strong, nonatomic) NSArray *pageData;
 @end
 
 @implementation ModelController
@@ -18,37 +18,38 @@
 {
     self = [super init];
     if (self) {
-        self.searchResults = [@[]mutableCopy];
+        // Create the data model.
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        _pageData = [[dateFormatter monthSymbols] copy];
     }
     return self;
 }
-- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard{
-    SMLOG(@"");
+
+- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
+{
     // Return the data view controller for the given index.
-    if (([self.searchResults count] == 0) || (index >= [self.searchResults count])) {
+    if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
         return nil;
     }
     
     // Create a new view controller and pass suitable data.
     DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
-    dataViewController.text = self.searchTerm;
+    dataViewController.text = self.pageData[index];
     return dataViewController;
-
 }
-- (NSUInteger)indexOfViewController:(DataViewController *)viewController{
-    SMLOG(@"");
+
+- (NSUInteger)indexOfViewController:(DataViewController *)viewController
+{
     // Return the index of the given data view controller.
     // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-    return [self.searchResults indexOfObject:viewController.text];
+    return [self.pageData indexOfObject:viewController.text];
 }
-
 
 #pragma mark - Page View Controller Data Source
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    SMLOG(@"");
-    NSUInteger index = [self indexOfViewController:(DataViewController *)viewController] - 1;
+    NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
@@ -59,19 +60,17 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    SMLOG(@"");
     NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
     if (index == NSNotFound) {
         return nil;
     }
     
     index++;
-    if (index == [self.searchResults count]) {
+    if (index == [self.pageData count]) {
         return nil;
     }
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
-
 
 
 

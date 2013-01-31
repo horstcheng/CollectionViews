@@ -11,8 +11,7 @@
 @class DataViewController;
 
 @interface ModelController : NSObject <UIPageViewControllerDataSource>
-@property (nonatomic, strong) NSMutableArray *searchResults;
-@property (nonatomic, strong) NSString *searchTerm;
+@property (nonatomic, strong) NSString *dateString;
 
 - (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController;
