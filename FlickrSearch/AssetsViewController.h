@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void (^AssetsViewControllerCompletion)(NSError* error, id sender);
 
 @interface AssetsViewController : UIViewController
-@property (nonatomic, strong) AssetsViewControllerCompletion completion;
+@property (nonatomic, strong) SmileViewControllerCompletion completion;
 @end

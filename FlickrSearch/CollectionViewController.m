@@ -160,10 +160,10 @@ static const CGFloat kMaxScale = 3.0f;
 }
 
 
--(void)ViewControllerDelegateUserIsDone:(CollectionViewControllerCompletion)completion{
+-(void)ViewControllerDelegateUserIsDone:(SmileViewControllerCompletion)completion{
     completion(nil, self);
 }
--(void)ViewControllerDelegateUserCancelled:(CollectionViewControllerCompletion)completion{
+-(void)ViewControllerDelegateUserCancelled:(SmileViewControllerCompletion)completion{
     completion(nil, self);    
 }
 

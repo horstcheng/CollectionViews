@@ -17,6 +17,12 @@
 		C67D3EFA16B346FD00AF2B90 /* StackedGridLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = C67D3EF916B346FD00AF2B90 /* StackedGridLayoutSection.m */; };
 		C67D3EFD16B3536E00AF2B90 /* CoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C67D3EFC16B3536D00AF2B90 /* CoverFlowLayout.m */; };
 		C6CC9D9916BB43CD00099AFD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6CC9D9816BB43CD00099AFD /* Default-568h@2x.png */; };
+		C6CC9D9C16BC382200099AFD /* AccordionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CC9D9B16BC382200099AFD /* AccordionViewController.m */; };
+		C6CC9DA016BC387100099AFD /* UIKit+Smile.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CC9D9F16BC387100099AFD /* UIKit+Smile.m */; };
+		C6CC9DA316BC40FC00099AFD /* AccordionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CC9DA216BC40FC00099AFD /* AccordionViewCell.m */; };
+		C6CC9DA616BC42B800099AFD /* AccordionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CC9DA516BC42B800099AFD /* AccordionHeaderView.m */; };
+		C6CC9DB416BC56B000099AFD /* AccordionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6CC9DB316BC56B000099AFD /* AccordionHeaderView.xib */; };
+		C6CC9DB916BC653600099AFD /* SMAccordionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CC9DB816BC653600099AFD /* SMAccordionView.m */; };
 		C6D5409A16B9A14F001C97CD /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D5409916B9A14F001C97CD /* PopoverViewController.m */; };
 		C6D5409D16B9A52D001C97CD /* ColorPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D5409C16B9A52D001C97CD /* ColorPickerTableViewController.m */; };
 		C6D540A016B9A635001C97CD /* PopoverSegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D5409F16B9A635001C97CD /* PopoverSegueViewController.m */; };
@@ -87,6 +93,17 @@
 		C67D3EFB16B3536D00AF2B90 /* CoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowLayout.h; sourceTree = "<group>"; };
 		C67D3EFC16B3536D00AF2B90 /* CoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowLayout.m; sourceTree = "<group>"; };
 		C6CC9D9816BB43CD00099AFD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C6CC9D9A16BC382200099AFD /* AccordionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccordionViewController.h; sourceTree = "<group>"; };
+		C6CC9D9B16BC382200099AFD /* AccordionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccordionViewController.m; sourceTree = "<group>"; };
+		C6CC9D9E16BC387100099AFD /* UIKit+Smile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+Smile.h"; sourceTree = "<group>"; };
+		C6CC9D9F16BC387100099AFD /* UIKit+Smile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIKit+Smile.m"; sourceTree = "<group>"; };
+		C6CC9DA116BC40FC00099AFD /* AccordionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccordionViewCell.h; sourceTree = "<group>"; };
+		C6CC9DA216BC40FC00099AFD /* AccordionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccordionViewCell.m; sourceTree = "<group>"; };
+		C6CC9DA416BC42B800099AFD /* AccordionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccordionHeaderView.h; sourceTree = "<group>"; };
+		C6CC9DA516BC42B800099AFD /* AccordionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccordionHeaderView.m; sourceTree = "<group>"; };
+		C6CC9DB316BC56B000099AFD /* AccordionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccordionHeaderView.xib; sourceTree = "<group>"; };
+		C6CC9DB716BC653600099AFD /* SMAccordionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAccordionView.h; sourceTree = "<group>"; };
+		C6CC9DB816BC653600099AFD /* SMAccordionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAccordionView.m; sourceTree = "<group>"; };
 		C6D5409816B9A14F001C97CD /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
 		C6D5409916B9A14F001C97CD /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
 		C6D5409B16B9A52D001C97CD /* ColorPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerTableViewController.h; sourceTree = "<group>"; };
@@ -176,6 +193,7 @@
 		C643AB2916B6E4E000D060ED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C6CC9D9D16BC382700099AFD /* accordion */,
 				C6D540B516BADC3A001C97CD /* assets */,
 				C6D540A316B9E4FA001C97CD /* split */,
 				C6D540A116B9DF66001C97CD /* collection */,
@@ -198,6 +216,22 @@
 				C64B21B516B704A4003EC159 /* ModelController.m */,
 			);
 			name = page;
+			sourceTree = "<group>";
+		};
+		C6CC9D9D16BC382700099AFD /* accordion */ = {
+			isa = PBXGroup;
+			children = (
+				C6CC9D9A16BC382200099AFD /* AccordionViewController.h */,
+				C6CC9D9B16BC382200099AFD /* AccordionViewController.m */,
+				C6CC9DA116BC40FC00099AFD /* AccordionViewCell.h */,
+				C6CC9DA216BC40FC00099AFD /* AccordionViewCell.m */,
+				C6CC9DA416BC42B800099AFD /* AccordionHeaderView.h */,
+				C6CC9DA516BC42B800099AFD /* AccordionHeaderView.m */,
+				C6CC9DB316BC56B000099AFD /* AccordionHeaderView.xib */,
+				C6CC9DB716BC653600099AFD /* SMAccordionView.h */,
+				C6CC9DB816BC653600099AFD /* SMAccordionView.m */,
+			);
+			name = accordion;
 			sourceTree = "<group>";
 		};
 		C6D5409716B9A137001C97CD /* popover */ = {
@@ -328,8 +362,9 @@
 				DD8D01D915BE735700E62C80 /* Flickr Interface */,
 				DD8D019A15BE5D9200E62C80 /* Supporting Files */,
 				C643AB2916B6E4E000D060ED /* Controllers */,
-				C6D540C116BAF97E001C97CD /* MainStoryboard_iPhone.storyboard */,
 				DD8D01A515BE5D9200E62C80 /* MainStoryboard_iPad.storyboard */,
+				C6CC9D9E16BC387100099AFD /* UIKit+Smile.h */,
+				C6CC9D9F16BC387100099AFD /* UIKit+Smile.m */,
 			);
 			path = FlickrSearch;
 			sourceTree = "<group>";
@@ -337,6 +372,7 @@
 		DD8D019A15BE5D9200E62C80 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C6D540C116BAF97E001C97CD /* MainStoryboard_iPhone.storyboard */,
 				DD8D01A215BE5D9200E62C80 /* AppDelegate.h */,
 				DD8D01A315BE5D9200E62C80 /* AppDelegate.m */,
 				DD8D019B15BE5D9200E62C80 /* FlickrSearch-Info.plist */,
@@ -462,6 +498,7 @@
 				C6D540B416B9F650001C97CD /* large_button_pressed.png in Resources */,
 				C6D540C316BAF97F001C97CD /* MainStoryboard_iPhone.storyboard in Resources */,
 				C6CC9D9916BB43CD00099AFD /* Default-568h@2x.png in Resources */,
+				C6CC9DB416BC56B000099AFD /* AccordionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +535,11 @@
 				C6D540B816BADC50001C97CD /* AssetsViewController.m in Sources */,
 				C6D540BD16BAE9CF001C97CD /* AssetsViewControllerCell.m in Sources */,
 				C6D540C016BAEA67001C97CD /* AssetsCollectionViewCellContent.m in Sources */,
+				C6CC9D9C16BC382200099AFD /* AccordionViewController.m in Sources */,
+				C6CC9DA016BC387100099AFD /* UIKit+Smile.m in Sources */,
+				C6CC9DA316BC40FC00099AFD /* AccordionViewCell.m in Sources */,
+				C6CC9DA616BC42B800099AFD /* AccordionHeaderView.m in Sources */,
+				C6CC9DB916BC653600099AFD /* SMAccordionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,12 +12,14 @@
 #import "PopoverViewController.h"
 #import "SplitViewController.h"
 #import "AssetsViewController.h"
+#import "AccordionViewController.h"
 
 static NSString* kSegueMainToCollection = @"segueMainToCollection";
 static NSString* kSegueMainToPage = @"segueMainToPage";
 static NSString* kSegueMainToPopover = @"segueMainToPopover";
 static NSString* kSegueMainToSplit = @"segueMainToSplit";
 static NSString* kSegueMainToAssets = @"segueMainToAssets";
+static NSString* kSegueMainToAccordion = @"segueMainToAccordion";
 
 @interface MainViewController ()
 
@@ -48,39 +50,39 @@ static NSString* kSegueMainToAssets = @"segueMainToAssets";
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    SmileViewControllerCompletion viewControllerCompletion = ^(NSError* error, id sender){
+        [self dismissViewControllerAnimated:YES completion:^{}];
+    };
+    
     if([segue.identifier isEqualToString:kSegueMainToCollection]){
         CollectionViewController* cvc = segue.destinationViewController;
-        cvc.completionUserIsDone = ^(NSError* error, id sender){
-            [self dismissViewControllerAnimated:YES completion:^{}];
-        };
+        cvc.completionUserIsDone = viewControllerCompletion;
     }
     else if([segue.identifier isEqualToString:kSegueMainToPage]){
         PageViewController* pvc = segue.destinationViewController;
-        pvc.completionUserIsDone = ^(NSError* error, id sender){
-            [self dismissViewControllerAnimated:YES completion:^{}];
-        };
+        pvc.completionUserIsDone = viewControllerCompletion;
     }
     else if([segue.identifier isEqualToString:kSegueMainToPopover]){
         PopoverViewController* pvc = segue.destinationViewController;
-        pvc.completion = ^(NSError* error, id sender){
-            [self dismissViewControllerAnimated:YES completion:^{}];
-        };
+        pvc.completion = viewControllerCompletion;
     }
     else if([segue.identifier isEqualToString:kSegueMainToSplit]){
         SplitViewController* svc = segue.destinationViewController;
-        svc.completion = ^(NSError* error, id sender){
-            [self dismissViewControllerAnimated:YES completion:^{}];
-        };
+        svc.completion = viewControllerCompletion;
     }
     else if([segue.identifier isEqualToString:kSegueMainToAssets]){
         UINavigationController* nc = segue.destinationViewController;
         AssetsViewController* avc = nc.viewControllers[0];
-        avc.completion = ^(NSError* error, id sender){
-            [self dismissViewControllerAnimated:YES completion:^{}];
-        };
+        avc.completion = viewControllerCompletion;
     }
-
+    else if([segue.identifier isEqualToString:kSegueMainToAccordion]){
+        UINavigationController* nc = segue.destinationViewController;
+        AccordionViewController* avc = nc.viewControllers[0];
+        avc.completion = viewControllerCompletion;
+    }
 }
+
+
 
 - (IBAction)collectionViewButtonHandler:(id)sender {
     [self performSegueWithIdentifier:kSegueMainToCollection sender:self];
@@ -96,6 +98,9 @@ static NSString* kSegueMainToAssets = @"segueMainToAssets";
 }
 - (IBAction)backButtonHandler:(id)sender {
     self.completion(nil, self);
+}
+- (IBAction)accordionViewButtonHandler:(id)sender {
+    [self performSegueWithIdentifier:kSegueMainToAccordion sender:self];
 }
 
 

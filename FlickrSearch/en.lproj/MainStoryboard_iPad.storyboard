@@ -66,13 +66,16 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDz-TW-bDt">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
+                                <state key="normal" title="Accordion View Demo">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="accordionViewButtonHandler:" destination="yGV-Hn-eiz" eventType="touchUpInside" id="Hkf-4X-KgI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFt-cE-HX1">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -125,11 +128,96 @@
                         <segue destination="2" kind="modal" identifier="segueMainToCollection" id="hOC-Dr-CVX"/>
                         <segue destination="soP-C9-u3T" kind="modal" identifier="segueMainToPage" id="pkc-G4-0S3"/>
                         <segue destination="gRM-gi-BgG" kind="modal" identifier="segueMainToPopover" id="u1z-g4-0fl"/>
+                        <segue destination="vRb-ob-Fnx" kind="modal" identifier="segueMainToAccordion" modalPresentationStyle="fullScreen" id="ze8-YO-o3x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="riu-kn-Le5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-889" y="3390"/>
+        </scene>
+        <!--Accordion View Controller-->
+        <scene sceneID="gcQ-L1-rLd">
+            <objects>
+                <viewController id="NjJ-vr-Ryt" customClass="AccordionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kzk-Qd-nVE">
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="large_button.png" translatesAutoresizingMaskIntoConstraints="NO" id="SI2-oj-icO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="299" id="dsE-JB-14E"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="15V-18-49w">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="imZ-vy-1ip"/>
+                                </constraints>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccordionViewCell" id="dLY-qX-g86" customClass="AccordionViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="158" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="158" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeq-eE-yb6">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="AL5-86-b9x"/>
+                                                        <constraint firstAttribute="width" constant="234" id="CWg-tU-ShP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="oeq-eE-yb6" firstAttribute="top" secondItem="dLY-qX-g86" secondAttribute="top" constant="11" id="Sag-Tz-zN0"/>
+                                            <constraint firstItem="oeq-eE-yb6" firstAttribute="leading" secondItem="dLY-qX-g86" secondAttribute="leading" constant="20" type="default" id="sTl-im-tHK"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="title" destination="oeq-eE-yb6" id="03z-gX-0Z7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NjJ-vr-Ryt" id="04A-72-gTD"/>
+                                    <outlet property="delegate" destination="NjJ-vr-Ryt" id="z11-fV-YIu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SI2-oj-icO" firstAttribute="trailing" secondItem="Kzk-Qd-nVE" secondAttribute="trailing" type="user" id="5x8-5C-zp3"/>
+                            <constraint firstAttribute="trailing" secondItem="15V-18-49w" secondAttribute="trailing" constant="7" id="Olp-K8-8J3"/>
+                            <constraint firstItem="SI2-oj-icO" firstAttribute="leading" secondItem="Kzk-Qd-nVE" secondAttribute="leading" type="user" id="Rw5-Yx-5OR"/>
+                            <constraint firstItem="15V-18-49w" firstAttribute="bottom" secondItem="Kzk-Qd-nVE" secondAttribute="bottom" type="default" id="Sgj-jc-mkx"/>
+                            <constraint firstItem="SI2-oj-icO" firstAttribute="leading" secondItem="Kzk-Qd-nVE" secondAttribute="leading" type="user" id="bcl-gv-eHk"/>
+                            <constraint firstItem="SI2-oj-icO" firstAttribute="top" secondItem="Kzk-Qd-nVE" secondAttribute="top" constant="202" id="mU7-XZ-VXz"/>
+                            <constraint firstItem="15V-18-49w" firstAttribute="top" secondItem="Kzk-Qd-nVE" secondAttribute="top" type="default" id="zzM-pq-wcj"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AIL-Kw-YBB">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="OHW-GD-6m0">
+                            <connections>
+                                <action selector="backButtonHandler:" destination="NjJ-vr-Ryt" id="rqF-bb-cEr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="tableView" destination="15V-18-49w" id="Y4Q-ff-Q7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5i-Gy-w18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="4569"/>
         </scene>
         <!--Assets View Controller-->
         <scene sceneID="vba-ME-yKx">
@@ -225,23 +313,6 @@
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1727" y="3395"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="00t-MR-iNh">
-            <objects>
-                <viewController id="pet-33-uh2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gg7-9i-SvN">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="8fg-qP-ufU">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="fCA-Td-AID"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TWG-lg-gp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2696" y="3403"/>
         </scene>
         <!--Split Master Table View Controller - Root View Controller-->
         <scene sceneID="mZj-bS-ujE">
@@ -887,13 +958,44 @@
             </objects>
             <point key="canvasLocation" x="754" y="3403"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ren-kK-aWC">
+            <objects>
+                <navigationController id="vRb-ob-Fnx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRA-8M-S2h">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NjJ-vr-Ryt" kind="relationship" relationship="rootViewController" id="srw-3o-Cqw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUv-gl-cHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="4569"/>
+        </scene>
     </scenes>
     <resources>
         <image name="divider_bar.png" width="697" height="13"/>
+        <image name="large_button.png" width="768" height="316"/>
         <image name="pushpin.png" width="22" height="31"/>
         <image name="search_text.png" width="97" height="25"/>
     </resources>
     <classes>
+        <class className="AccordionViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccordionViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AccordionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccordionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
         <class className="AssetsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AssetsViewController.h"/>
             <relationships>
@@ -912,10 +1014,6 @@
         <class className="CollectionViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CollectionViewController.h"/>
             <relationships>
-                <relationship kind="action" name="backButtonHandler:"/>
-                <relationship kind="action" name="exitButtonTapped:"/>
-                <relationship kind="action" name="layoutSelectionTapped:"/>
-                <relationship kind="action" name="shareButtonTapped:"/>
                 <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="collectionViewContainer" candidateClass="UIView"/>
                 <relationship kind="outlet" name="currentPinchCollectionView" candidateClass="UICollectionView"/>
@@ -948,28 +1046,17 @@
         <class className="FlickrPhotoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FlickrPhotoViewController.h"/>
             <relationships>
-                <relationship kind="action" name="done:"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="MainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButtonHandler:"/>
-                <relationship kind="action" name="collectionViewButtonHandler:"/>
-                <relationship kind="action" name="pageViewButtonHandler:"/>
-                <relationship kind="action" name="popoverViewButtonHandler:"/>
-                <relationship kind="action" name="splitViewButtonHandler:"/>
-            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="PageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PageViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonHandler:"/>
-            </relationships>
         </class>
         <class className="PopoverSegueViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PopoverSegueViewController.h"/>
@@ -977,8 +1064,6 @@
         <class className="PopoverViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PopoverViewController.h"/>
             <relationships>
-                <relationship kind="action" name="doneButtonHandler:"/>
-                <relationship kind="action" name="showCustomPopoverButtonHandler:"/>
                 <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="showCustomPopoverButton" candidateClass="UIButton"/>
@@ -998,9 +1083,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

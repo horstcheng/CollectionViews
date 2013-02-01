@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^MainViewControllerCompletion)(NSError* error, id sender);
 
 @interface MainViewController : UIViewController
-@property (nonatomic, strong) MainViewControllerCompletion completion;
+@property (nonatomic, strong) SmileViewControllerCompletion completion;
 @end
