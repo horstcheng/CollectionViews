@@ -11,11 +11,13 @@
 #import "PageViewController.h"
 #import "PopoverViewController.h"
 #import "SplitViewController.h"
+#import "AssetsViewController.h"
 
 static NSString* kSegueMainToCollection = @"segueMainToCollection";
 static NSString* kSegueMainToPage = @"segueMainToPage";
 static NSString* kSegueMainToPopover = @"segueMainToPopover";
 static NSString* kSegueMainToSplit = @"segueMainToSplit";
+static NSString* kSegueMainToAssets = @"segueMainToAssets";
 
 @interface MainViewController ()
 
@@ -70,6 +72,14 @@ static NSString* kSegueMainToSplit = @"segueMainToSplit";
             [self dismissViewControllerAnimated:YES completion:^{}];
         };
     }
+    else if([segue.identifier isEqualToString:kSegueMainToAssets]){
+        UINavigationController* nc = segue.destinationViewController;
+        AssetsViewController* avc = nc.viewControllers[0];
+        avc.completion = ^(NSError* error, id sender){
+            [self dismissViewControllerAnimated:YES completion:^{}];
+        };
+    }
+
 }
 
 - (IBAction)collectionViewButtonHandler:(id)sender {
